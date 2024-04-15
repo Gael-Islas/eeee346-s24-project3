@@ -12,10 +12,10 @@ extern ofstream myFile; // for filewrite
 
 class Wheel {
   string name;
-	double radius;
-	double velocity;
-	double x;
-	double y;
+  double radius;
+  double velocity;
+  double x;
+  double y;
 
 public:
   /*
@@ -25,7 +25,7 @@ public:
    * @param x - position in the x-axis
    * @param y - poition in the y-axis
    */
-	Wheel(string name, double r, double x, double y);
+  Wheel(string name, double r, double x, double y);
 
   /*
    * @return radius of the wheel
@@ -41,7 +41,7 @@ public:
    * set wheel velocity
    * @param v - velocity of the wheel
    */
-	void setVelocity(double v) { /*TODO: write your code*/ };
+  void setVelocity(double v) { /*TODO: write your code*/ };
 
   /*
    * set the wheel radius
@@ -57,7 +57,7 @@ public:
   /*
    * @return position of the wheel in y-axis
    */
-	double getY() { /*TODO: write your code*/ }
+  double getY() { /*TODO: write your code*/ }
 
   /*
    * @return name of the wheel
@@ -67,7 +67,7 @@ public:
   /*
    * print the state of the wheel
    */
-	void print() ;
+  void print() ;
 };
 
 #endif
