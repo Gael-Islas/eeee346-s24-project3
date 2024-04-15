@@ -18,18 +18,18 @@ protected:
   /*
    * model name of Robot
   */
-	string model;
+  string model;
 public:
   /*
    * Robot constructor
    * @param model - model name of Robot
    */
-	Robot(string model);
+  Robot(string model);
 
   /*
    * print the Robot state
    */
-	virtual void print() = 0; // pure virtual function
+  virtual void print() = 0; // pure virtual function
 };
 
 #endif
