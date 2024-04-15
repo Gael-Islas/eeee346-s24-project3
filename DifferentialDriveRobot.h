@@ -5,10 +5,10 @@
 #include "MobileRobot.h"
 
 class DifferentialDriveRobot : public MobileRobot {
-	shared_ptr<Wheel> leftWheel;
-	shared_ptr<Wheel> rightWheel;
-	double wheelRadius;
-	double wheelDistance;
+  shared_ptr<Wheel> leftWheel;
+  shared_ptr<Wheel> rightWheel;
+  double wheelRadius;
+  double wheelDistance;
   static const string MODEL_NAME;
 
 public:
@@ -17,45 +17,44 @@ public:
    * @param r - radius of the wheels
    * @param d - distance between the wheels
    */
-	DifferentialDriveRobot(double r, double d);
+  DifferentialDriveRobot(double r, double d);
     
   /*
    * set velocity of the right wheel
    * @param v - velocity of the right wheel
    */
-	void setRightWheelVelocity(double v);
+  void setRightWheelVelocity(double v);
 
   /*
    * set velocity of the left wheel
    * @param v - velocity of the left wheel
    */
-	void setLeftWheelVelocity(double v);
+  void setLeftWheelVelocity(double v);
 
   /*
    * @see MobileRobot
    */
-	double getVel() override;
+  double getVel() override;
 
   /*
    * @see MobileRobot
    */
-	double getVx() override;
+  double getVx() override;
 
   /*
    * @see MobileRobot
    */
-	double getVy() override;
+  double getVy() override;
 
   /*
    * @see MobileRobot
    */
-	double getRotVel() override;
+  double getRotVel() override;
 
   /*
    * print the DifferentialDriveRobot state
    */
-	void print() override;
-
+  void print() override;
 };
 
 #endif
