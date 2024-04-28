@@ -20,9 +20,9 @@ int main(void) {
   double flVel, frVel, blVel, brVel;
   
   myFile.open("result.txt"); // for filewrite
-
+  
   /*TODO: create a MobileRobot-typed object pointer named robot*/
-
+  MobileRobot* robot;
   cin >> type;
 
   switch (type) {
@@ -32,13 +32,13 @@ int main(void) {
         cin >> radius >> wheelDist;
 
         /*TODO: make the object pointer robot point to a new object of DifferentialDriveRobot*/
-
+        robot = new(DifferentialDriveRobot);
         // receive the values of wheel velocities
         cin >> lVel >> rVel;
 
         /*TODO: downcast the pointer type of robot to DifferentialDriveRobot 
          *      and assign the result to a DifferentialDriveRobot-typed object pointer named diff*/ 
-
+        DifferentialDriveRobot* diff = dynamic_cast<robot>(DifferentialDriveRobot);
         // set the wheel velocities
         if (diff) {
           diff->setLeftWheelVelocity(lVel);
@@ -57,13 +57,13 @@ int main(void) {
         cin >> radius >> lrDist >> fbDist;
 
         /*TODO: make the object pointer robot point to a new object of OmnidirectionalDriveRobot*/
-
+        robot = new(OmnidirectionalDriveRobot);
         // receive the values of wheel velocities
         cin >> flVel >> frVel >> blVel >> brVel;
 
         /*TODO: downcast the pointer type of robot to OmnidirectionalDriveRobot
          *      and assign the result to an OmnidirectionalDriveRobot-typed object pointer named omni*/ 
-          
+         OmnidirectionalDriveRobot* omni = dynamic_cast<robot>(OmnidirectionalDriveRobot); 
         // set the wheel velocities
         if (omni) {
           omni->setFrontLeftWheelVelocity(flVel);
